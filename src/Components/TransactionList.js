@@ -1,24 +1,25 @@
 import React from 'react';
-import './TransactionList.css';
 
-function TransactionList({ transactions }) {
+function TransactionList({ transactions, onDeleteTransaction }) {
   return (
     <table>
       <thead>
         <tr>
-          <th>Date</th>
           <th>Description</th>
-          <th>Category</th>
           <th>Amount</th>
+          <th>Category</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        {transactions.map(transaction => (
+        {transactions.map((transaction) => (
           <tr key={transaction.id}>
-            <td>{transaction.date}</td>
             <td>{transaction.description}</td>
+            <td>{transaction.amount}</td>
             <td>{transaction.category}</td>
-            <td>${transaction.amount.toFixed(2)}</td>
+            <td>
+              <button onClick={() => onDeleteTransaction(transaction.id)}>Delete</button>
+            </td>
           </tr>
         ))}
       </tbody>

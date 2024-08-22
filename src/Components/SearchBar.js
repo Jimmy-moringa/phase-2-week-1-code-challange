@@ -1,13 +1,12 @@
 import React from 'react';
-import './SearchBar.css';
 
-function SearchBar({ value, onChange }) {
+function SearchBar({ onSearch }) {
   return (
     <input
       type="text"
-      value={value}
-      onChange={onChange}
-      placeholder="Search by description..."
+      placeholder="Search transactions"
+      onChange={(e) => onSearch(e.target.value)}
+      style={{ marginBottom: '20px', padding: '8px', width: '100%' }}
     />
   );
 }
