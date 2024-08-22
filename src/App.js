@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SearchBar from './Components/SearchBar';
 import TransactionForm from './Components/TransactionForm';
 import TransactionList from './Components/TransactionList';
-
+import './App.css';
 function App() {
   const [transactions, setTransactions] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');

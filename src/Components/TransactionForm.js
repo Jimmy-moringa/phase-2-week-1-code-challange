@@ -20,14 +20,13 @@ function TransactionForm({ onAddTransaction }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
         required
-        style={{ marginRight: '10px' }}
       />
       <input
         type="number"
@@ -35,7 +34,6 @@ function TransactionForm({ onAddTransaction }) {
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
         required
-        style={{ marginRight: '10px' }}
       />
       <input
         type="text"
@@ -43,7 +41,6 @@ function TransactionForm({ onAddTransaction }) {
         value={category}
         onChange={(e) => setCategory(e.target.value)}
         required
-        style={{ marginRight: '10px' }}
       />
       <button type="submit">Add Transaction</button>
     </form>
