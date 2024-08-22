@@ -27,7 +27,9 @@ function App() {
 
   return (
     <div>
-      <h1>Transaction Manager</h1>
+      <h1>Bank of Flatiron</h1>
+
+      <h2>Transaction List</h2>
       <SearchBar onSearch={setSearchTerm} />
       <TransactionForm onAddTransaction={addTransaction} />
       <TransactionList transactions={filteredTransactions} onDeleteTransaction={deleteTransaction} />
