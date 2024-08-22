@@ -1,0 +1,23 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2em;
+}
+
+.charts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chart {
+  width: 45%;
+}
